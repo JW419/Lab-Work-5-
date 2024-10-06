@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "yb2RJlM9qQX7vyeRAr8OdvC010qlvNVg3LcpBUZAwgSoFjYU7DGPI21Fo6nNx2cFemJN9XtRZnN1udnIKyqqDQ==",
+  "success": true,
+  "projectFilePath": "/Users/janm.wilkes/Projects/Avoider/AVoider/AVoider.csproj",
+  "expectedPackageFiles": [
+    "/Users/janm.wilkes/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.31/microsoft.aspnetcore.app.ref.6.0.31.nupkg.sha512",
+    "/Users/janm.wilkes/.nuget/packages/microsoft.netcore.app.ref/6.0.31/microsoft.netcore.app.ref.6.0.31.nupkg.sha512"
+  ],
+  "logs": []
+}
