@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using System.Numerics;
+//using System.Numerics;
 
 
 namespace AVoider
@@ -20,8 +20,8 @@ namespace AVoider
         private readonly Rect rect;
         private readonly float radius2;  // radius squared
         private readonly float cellSize;
-        private Vector2[,] grid;
-        private List<Vector2> activeSamples = new List<Vector2>();
+        private Vector3[,] grid;
+        private List<Vector3> activeSamples = new List<Vector3>();
 
         /// Create a sampler with the following parameters:
         ///
@@ -33,23 +33,23 @@ namespace AVoider
             rect = new Rect(0, 0, width, height);
             radius2 = radius * radius;
             cellSize = radius / Mathf.Sqrt(2);
-            grid = new Vector2[Mathf.CeilToInt(width / cellSize),
+            grid = new Vector3[Mathf.CeilToInt(width / cellSize),
                                Mathf.CeilToInt(height / cellSize)];
         }
 
         /// Return a lazy sequence of samples. You typically want to call this in a foreach loop, like so:
         ///   foreach (Vector2 sample in sampler.Samples()) { ... }
-        public IEnumerable<Vector2> Samples()
+        public IEnumerable<Vector3> Samples()
         {
             // First sample is choosen randomly
-            yield return AddSample(new Vector2(UnityEngine.Random.value * rect.width, UnityEngine.Random.value * rect.height));
+            yield return AddSample(new Vector3(UnityEngine.Random.value * rect.width, UnityEngine.Random.value * rect.height));
 
             while (activeSamples.Count > 0)
             {
 
                 // Pick a random active sample
                 int i = (int)Random.value * activeSamples.Count;
-                Vector2 sample = activeSamples[i];
+                Vector3 sample = activeSamples[i];
 
                 // Try `k` random candidates between [radius, 2 * radius] from that sample.
                 bool found = false;
@@ -58,7 +58,7 @@ namespace AVoider
 
                     float angle = 2 * Mathf.PI * Random.value;
                     float r = Mathf.Sqrt(Random.value * 3 * radius2 + radius2); // See: http://stackoverflow.com/questions/9048095/create-random-number-within-an-annulus/9048443#9048443
-                    Vector2 candidate = sample + r * new Vector2(Mathf.Cos(angle), Mathf.Sin(angle));
+                    Vector3 candidate = sample + r * new Vector3(Mathf.Cos(angle), Mathf.Sin(angle));
 
                     // Accept candidates if it's inside the rect and farther than 2 * radius to any existing sample.
                     if (rect.Contains(candidate) && IsFarEnough(candidate))
@@ -78,7 +78,7 @@ namespace AVoider
             }
         }
 
-        private bool IsFarEnough(Vector2 sample)
+        private bool IsFarEnough(Vector3 sample)
         {
             GridPos pos = new GridPos(sample, cellSize);
 
@@ -91,10 +91,10 @@ namespace AVoider
             {
                 for (int x = xmin; x <= xmax; x++)
                 {
-                    Vector2 s = grid[x, z];
-                    if (s != Vector2.zero)
+                    Vector3 s = grid[x, z];
+                    if (s != Vector3.zero)
                     {
-                        Vector2 d = s - sample;
+                        Vector3 d = s - sample;
                         if (d.x * d.x + d.z * d.z < radius2) return false;
                     }
                 }
@@ -108,7 +108,7 @@ namespace AVoider
         }
 
         /// Adds the sample to the active samples queue and the grid before returning it
-        private Vector2 AddSample(Vector2 sample)
+        private Vector3 AddSample(Vector3 sample)
         {
             activeSamples.Add(sample);
             GridPos pos = new GridPos(sample, cellSize);
@@ -122,7 +122,7 @@ namespace AVoider
             public int x;
             public int z;
 
-            public GridPos(Vector2 sample, float cellSize)
+            public GridPos(Vector3 sample, float cellSize)
             {
                 x = (int)(sample.x / cellSize);
                 z = (int)(sample.z / cellSize);

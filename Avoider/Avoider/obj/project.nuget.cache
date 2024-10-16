@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "yb2RJlM9qQX7vyeRAr8OdvC010qlvNVg3LcpBUZAwgSoFjYU7DGPI21Fo6nNx2cFemJN9XtRZnN1udnIKyqqDQ==",
+  "dgSpecHash": "DfgS67KEfY8=",
   "success": true,
-  "projectFilePath": "/Users/janm.wilkes/Projects/Avoider/AVoider/AVoider.csproj",
+  "projectFilePath": "C:\\Users\\ja314680\\Documents\\GitHub\\Lab-Work-5-\\Avoider\\AVoider\\AVoider.csproj",
   "expectedPackageFiles": [
-    "/Users/janm.wilkes/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.31/microsoft.aspnetcore.app.ref.6.0.31.nupkg.sha512",
-    "/Users/janm.wilkes/.nuget/packages/microsoft.netcore.app.ref/6.0.31/microsoft.netcore.app.ref.6.0.31.nupkg.sha512"
+    "C:\\Users\\ja314680\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.32\\microsoft.windowsdesktop.app.ref.6.0.32.nupkg.sha512",
+    "C:\\Users\\ja314680\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.32\\microsoft.netcore.app.ref.6.0.32.nupkg.sha512",
+    "C:\\Users\\ja314680\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.32\\microsoft.aspnetcore.app.ref.6.0.32.nupkg.sha512"
   ],
   "logs": []
 }
