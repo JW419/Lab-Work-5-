@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AVoider")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+013761bb2b49523f23f6b6f6ca3567f6f337f5d8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c0ca4073a6337c4ace9528e60bee2c56f855e9e1")]
 [assembly: System.Reflection.AssemblyProductAttribute("AVoider")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AVoider")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

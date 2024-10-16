@@ -48,7 +48,7 @@ namespace AVoider
             {
 
                 // Pick a random active sample
-                int i = (int)Random.value * activeSamples.Count;
+                int i = (int)UnityEngine.Random.value * activeSamples.Count;
                 Vector3 sample = activeSamples[i];
 
                 // Try `k` random candidates between [radius, 2 * radius] from that sample.
@@ -56,8 +56,8 @@ namespace AVoider
                 for (int j = 0; j < k; ++j)
                 {
 
-                    float angle = 2 * Mathf.PI * Random.value;
-                    float r = Mathf.Sqrt(Random.value * 3 * radius2 + radius2); // See: http://stackoverflow.com/questions/9048095/create-random-number-within-an-annulus/9048443#9048443
+                    float angle = 2 * Mathf.PI * UnityEngine.Random.value;
+                    float r = Mathf.Sqrt(UnityEngine.Random.value * 3 * radius2 + radius2); // See: http://stackoverflow.com/questions/9048095/create-random-number-within-an-annulus/9048443#9048443
                     Vector3 candidate = sample + r * new Vector3(Mathf.Cos(angle), Mathf.Sin(angle));
 
                     // Accept candidates if it's inside the rect and farther than 2 * radius to any existing sample.
