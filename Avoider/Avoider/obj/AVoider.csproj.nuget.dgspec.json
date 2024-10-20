@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ja314680\\Documents\\GitHub\\Lab-Work-5-\\Avoider\\AVoider\\AVoider.csproj": {}
+    "/Users/janm.wilkes/Lab Submission Project/Lab-Work-5/Avoider/AVoider/AVoider.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ja314680\\Documents\\GitHub\\Lab-Work-5-\\Avoider\\AVoider\\AVoider.csproj": {
+    "/Users/janm.wilkes/Lab Submission Project/Lab-Work-5/Avoider/AVoider/AVoider.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ja314680\\Documents\\GitHub\\Lab-Work-5-\\Avoider\\AVoider\\AVoider.csproj",
+        "projectUniqueName": "/Users/janm.wilkes/Lab Submission Project/Lab-Work-5/Avoider/AVoider/AVoider.csproj",
         "projectName": "AVoider",
-        "projectPath": "C:\\Users\\ja314680\\Documents\\GitHub\\Lab-Work-5-\\Avoider\\AVoider\\AVoider.csproj",
-        "packagesPath": "C:\\Users\\ja314680\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ja314680\\Documents\\GitHub\\Lab-Work-5-\\Avoider\\AVoider\\obj\\",
+        "projectPath": "/Users/janm.wilkes/Lab Submission Project/Lab-Work-5/Avoider/AVoider/AVoider.csproj",
+        "packagesPath": "/Users/janm.wilkes/.nuget/packages/",
+        "outputPath": "/Users/janm.wilkes/Lab Submission Project/Lab-Work-5/Avoider/AVoider/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ja314680\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/janm.wilkes/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -34,11 +32,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -58,15 +51,11 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.32, 6.0.32]"
+              "version": "[6.0.31, 6.0.31]"
             },
             {
               "name": "Microsoft.NETCore.App.Ref",
-              "version": "[6.0.32, 6.0.32]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[6.0.32, 6.0.32]"
+              "version": "[6.0.31, 6.0.31]"
             }
           ],
           "frameworkReferences": {
@@ -74,7 +63,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.317/RuntimeIdentifierGraph.json"
         }
       }
     }
